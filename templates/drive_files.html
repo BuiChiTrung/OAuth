@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+<main style="margin-left: 20px">
+    <h1>Drive files</h1>
+    <ul>
+        {% for file in files: %}
+            <li><a href="https://www.googleapis.com/drive/v2/files/{{ file['id'] }}">{{ file['name'] }}</a></li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

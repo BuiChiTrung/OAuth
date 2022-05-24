@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    main {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #welcome {
+        font-size: 25px
+    }
+    img {
+        width: 130px;
+        border-radius: 50%
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+<main>
+    <div id="welcome"><i>Welcome back, {{ user_info['family_name'] }} {{ user_info['given_name'] }}!</i></div>
+    <div id="email">Email: {{ user_info['email'] }}</div><br>
+    <img src="{{ user_info['picture'] }}" alt="avatar">
+    <script src="" async defer></script>
+</main>
+{% endblock %}
