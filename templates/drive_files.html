@@ -5,7 +5,7 @@
     <h1>Drive files</h1>
     <ul>
         {% for file in files: %}
-            <li><a href="https://www.googleapis.com/drive/v2/files/{{ file['id'] }}">{{ file['name'] }}</a></li>
+            <li>{{ file['name'] }}</li>
         {% endfor %}
     </ul>
 </main>
